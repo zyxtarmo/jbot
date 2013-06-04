@@ -22,10 +22,18 @@ public abstract class Attack implements Runnable {
 		this.target = target;
 	}
 
+	/**
+	 * 
+	 * @return the current target port (if any)
+	 */
 	public int getPort() {
 		return port;
 	}
 
+	/**
+	 * 
+	 * @return the current target
+	 */
 	public String getTarget() {
 		return target;
 	}
