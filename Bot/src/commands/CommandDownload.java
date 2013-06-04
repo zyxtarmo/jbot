@@ -22,6 +22,9 @@ public class CommandDownload extends Command implements Runnable {
 		new Thread(this).start();
 	}
 
+	/**
+	 * Starts a new thread downloading and executing the file
+	 */
 	public void run() {
 		try {
 			File file = null;

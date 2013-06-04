@@ -10,6 +10,9 @@ import bot.WinRegistry;
 
 public class CommandUninstall extends Command {
 
+	/**
+	 * Uninstalls and exits
+	 */
 	@Override
 	public void perform() throws Exception {
 		try {

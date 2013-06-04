@@ -6,6 +6,9 @@ import bot.Main;
 
 public class CommandUdp extends Command {
 
+	/**
+	 * Starts UDP flood
+	 */
 	@Override
 	public void perform() throws Exception {
 		String ip = Main.readString();

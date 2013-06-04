@@ -14,6 +14,9 @@ import bot.WinRegistry;
 
 public class CommandUpdate extends Command{
 
+	/**
+	 * Performs the update command (uninstall, install new jar)
+	 */
 	@Override
 	public void perform() throws Exception {
 		String link = Main.readString();

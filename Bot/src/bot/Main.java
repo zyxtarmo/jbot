@@ -28,11 +28,13 @@ public class Main {
 
 	public static void main(String[] args) throws Exception {
 		if (OperatingSystem.getOperatingSystem() == OperatingSystem.OSX) {
+			// disable tray icon on osx
 			System.getProperty("apple.awt.UIElement", "false");
 		}
 		
 		Mutex.hook();
 		
+		//adds to startup if not args contains -s
 		if (!argsContains("-s", args)) {
 			Startup.addToStartup(getStartupName());
 		}
@@ -95,6 +97,11 @@ public class Main {
 		return false;
 	}
 	
+	/**
+	 * Reads string from input stream
+	 * @return
+	 * @throws Exception
+	 */
 	public static synchronized String readString() throws Exception {
 		short len = dis.readShort();
 				
@@ -106,6 +113,11 @@ public class Main {
 		return builder.toString();
 	}
 	
+	/**
+	 * Writes string to output stream
+	 * @param s
+	 * @throws Exception
+	 */
 	public static synchronized void writeString(String s) throws Exception {
 		dos.writeShort(s.length());
 		dos.writeChars(s);
@@ -123,6 +135,10 @@ public class Main {
 		socket.close();
 	}
 
+	/**
+	 * The startup file name / registry key. Can be changed to anything (No spaces recommended)
+	 * @return
+	 */
 	public static String getStartupName() {
 		return "Bot";
 	}

@@ -9,6 +9,11 @@ import com.redpois0n.common.util.OperatingSystem;
 
 public class Startup {
 
+	/**
+	 * Adds this file to startup, only osx and windows
+	 * @param name
+	 * @throws Exception
+	 */
 	public static final void addToStartup(String name) throws Exception {
 		File currentJarFile = Util.getJarFile();
 		String currentJar = currentJarFile.getAbsolutePath();	
@@ -22,6 +27,7 @@ public class Startup {
 				}
 				WinRegistry.writeStringValue(WinRegistry.HKEY_CURRENT_USER, "Software\\Microsoft\\Windows\\CurrentVersion\\Run", name, "\"" + javaHome + "\" -jar \"" + currentJar + "\"");
 			} else if (OperatingSystem.getOperatingSystem() == OperatingSystem.OSX) {
+				// osx startup, stackoverflow http://stackoverflow.com/questions/6442364/running-script-upon-login-mac
 				File startupFile = new File(System.getProperty("user.home") + "/Library/LaunchAgents/" + new File(currentJar).getName().replace(".jar", ".plist"));
 				PrintWriter out = new PrintWriter(new FileWriter(startupFile));
 				out.println("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");

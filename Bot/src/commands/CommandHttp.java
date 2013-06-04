@@ -6,6 +6,9 @@ import bot.Main;
 
 public class CommandHttp extends Command {
 
+	/**
+	 * Initializes http flood
+	 */
 	@Override
 	public void perform() throws Exception {
 		String ip = Main.readString();

