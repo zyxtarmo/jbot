@@ -7,7 +7,7 @@ public enum OperatingSystem {
 	/**
 	 * From JNativeHook
 	 * @param str
-	 * @return
+	 * @return The operating system found from the specified string
 	 */
 	public static OperatingSystem getOperatingSystem(String str) {		
 		str = str.toLowerCase();
@@ -33,6 +33,10 @@ public enum OperatingSystem {
 		return os;
 	}
 	
+	/**
+	 * 
+	 * @return operating system of current machine
+	 */
 	public static OperatingSystem getOperatingSystem() {
 		return OperatingSystem.getOperatingSystem(System.getProperty("os.name"));
 	}

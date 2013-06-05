@@ -2,6 +2,10 @@ package com.redpois0n.common.packets;
 
 public class Headers {
 	
+	/**
+	 * Packet headers
+	 */
+	
 	public static final byte PACKET_PING = 0;
 	
 	public static final byte PACKET_DISCONNECT = 1;

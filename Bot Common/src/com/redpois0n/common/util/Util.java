@@ -4,6 +4,11 @@ import java.util.Random;
 
 public class Util {
 	
+	/**
+	 * Generates a random string
+	 * @param len
+	 * @return random string
+	 */
 	public static String randomString(short len) {
 		char[] alph = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890".toCharArray();
 		
