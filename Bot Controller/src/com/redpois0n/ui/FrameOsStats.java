@@ -22,6 +22,9 @@ import com.redpois0n.ui.stats.OsStats;
 @SuppressWarnings("serial")
 public class FrameOsStats extends JDialog {
 
+	/**
+	 * OS icons
+	 */
 	public static final ImageIcon OS_WIN = Util.getIcon("os_win");
 	public static final ImageIcon OS_MAC = Util.getIcon("os_mac");
 	public static final ImageIcon OS_LINUX = Util.getIcon("os_linux");
@@ -31,6 +34,10 @@ public class FrameOsStats extends JDialog {
 	private JTable table;
 	private JScrollPane scrollPane;
 	
+	/**
+	 * Returns the model
+	 * @return
+	 */
 	public DefaultTableModel getModel() {
 		return (DefaultTableModel) table.getModel();
 	}
@@ -82,6 +89,9 @@ public class FrameOsStats extends JDialog {
 		load();
 	}
 	
+	/**
+	 * Clears and loads from operating system statistics
+	 */
 	public void load() {
 		while (getModel().getRowCount() > 0) {
 			getModel().removeRow(0);

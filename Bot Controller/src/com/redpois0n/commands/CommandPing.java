@@ -6,6 +6,9 @@ import com.redpois0n.common.packets.Headers;
 
 public class CommandPing extends Command {
 
+	/**
+	 * Pings all bots
+	 */
 	@Override
 	public void execute(String[] args, Bot[] bots) throws Exception {
 		for (Bot bot : bots) {

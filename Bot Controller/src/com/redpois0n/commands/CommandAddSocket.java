@@ -10,6 +10,9 @@ import com.redpois0n.exceptions.IllegalArgumentLengthException;
 
 public class CommandAddSocket extends Command {
 
+	/**
+	 * Adds server socket and begins to listen
+	 */
 	@Override
 	public void execute(String[] args, Bot[] bots) throws Exception {
 		if (args.length != 1) {

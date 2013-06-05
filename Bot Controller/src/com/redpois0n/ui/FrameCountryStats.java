@@ -22,6 +22,10 @@ public class FrameCountryStats extends JDialog {
 	private final JPanel contentPanel = new JPanel();
 	private JTable table;
 	
+	/**
+	 * Returns the model
+	 * @return
+	 */
 	public DefaultTableModel getModel() {
 		return (DefaultTableModel) table.getModel();
 	}
@@ -66,6 +70,9 @@ public class FrameCountryStats extends JDialog {
 		load();
 	}
 
+	/**
+	 * Clears and loads from country statistics
+	 */
 	public void load() {
 		while (getModel().getRowCount() > 0) {
 			getModel().removeRow(0);

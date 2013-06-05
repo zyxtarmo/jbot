@@ -15,6 +15,11 @@ public class FrameBuild extends JFrame {
 	private JTextField txtHost;
 	private JSpinner spPort;
 
+	/**
+	 * 
+	 *	TODO Finish this
+	 *
+	 */
 	public FrameBuild() {
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);

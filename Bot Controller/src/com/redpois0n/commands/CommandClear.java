@@ -5,6 +5,9 @@ import com.redpois0n.bot.Main;
 
 public class CommandClear extends Command {
 
+	/**
+	 * Clears console(s)
+	 */
 	@Override
 	public void execute(String[] args, Bot[] bots) throws Exception {
 		Main.gui.clear();

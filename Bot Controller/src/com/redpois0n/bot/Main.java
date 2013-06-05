@@ -31,6 +31,11 @@ public class Main {
 	public static final List<Bot> bots = new ArrayList<Bot>();
 	public static Frame gui;
 
+	/**
+	 * Main entry point
+	 * @param args
+	 * @throws Exception
+	 */
 	public static void main(String[] args) throws Exception {
 		isStats = argsContains("-stats", args);
 		if (isStats) {
@@ -107,6 +112,11 @@ public class Main {
 		}
 	}
 	
+	
+	/**
+	 * Prints exception if it should
+	 * @param ex
+	 */
 	public static void handleException(Exception ex) {
 		if (isVerbose) {
 			ex.printStackTrace();

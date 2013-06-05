@@ -137,18 +137,34 @@ public final class Bot implements Runnable {
 		return null;
 	}
 
-	public String getComp() {
+	/**
+	 * Returns this bots computer name 
+	 * @return The computer name (same as username if not windows)
+	 */
+	public String getComputername() {
 		return comp;
 	}
 
-	public String getUser() {
+	/**
+	 * Returns this bots username
+	 * @return
+	 */
+	public String getUsername() {
 		return user;
 	}
 
+	/**
+	 * Returns the version
+	 * @return
+	 */
 	public String getVersion() {
 		return version;
 	}
 	
+	/**
+	 * Returns the operating system
+	 * @return
+	 */
 	public String getOs() {
 		return os;
 	}

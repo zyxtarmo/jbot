@@ -8,12 +8,16 @@ import com.redpois0n.common.packets.Headers;
 
 public class CommandDisconnect extends Command {
 
+	/**
+	 * Disconnects all bots
+	 */
 	@Override
 	public void execute(String[] args, Bot[] bots) throws Exception {
 		for (int i = 0; i < bots.length; i++) {
 			try {
 				Bot bot = bots[i];
 				bot.writeByte(Headers.PACKET_DISCONNECT);
+				bot.disconnect();
 			} catch (Exception ex) {
 				Main.handleException(ex);
 			}

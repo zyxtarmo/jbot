@@ -27,30 +27,54 @@ public class OsStats implements Serializable {
 		this.os = os;
 	}
 	
+	/**
+	 * Returns OS
+	 * @return
+	 */
 	public String getOs() {
 		return os;
 	}
 	
+	/**
+	 * Returns IP addresses already saved in the OS map
+	 * @return
+	 */
 	public List<String> getIPs() {
 		return ip;
 	}
 
+	/**
+	 * Loads the stat map
+	 * @throws Exception
+	 */
 	public static void load() throws Exception {
 		ObjectInputStream in = new ObjectInputStream(new FileInputStream(getFile()));
 		map = (HashMap<String, OsStats>) in.readObject();
 		in.close();
 	}
 	
+	/**
+	 * Saves the stat map
+	 * @throws Exception
+	 */
 	public static void save() throws Exception {
 		ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(getFile()));
 		out.writeObject(map);
 		out.close();
 	}
 
+	/**
+	 * Returns the file where it will be saved
+	 * @return
+	 */
 	public static File getFile() {
 		return new File("os.dat");
 	}
 	
+	/**
+	 * Adds the bots operating system to stats
+	 * @param bot
+	 */
 	public static void add(Bot bot) {
 		String os = bot.getOs().replace("_", " ");
 		

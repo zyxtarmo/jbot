@@ -30,30 +30,54 @@ public class CountryStats implements Serializable {
 		this.code = code;
 	}
 	
+	/**
+	 * Returns the country code
+	 * @return
+	 */
 	public String getCode() {
 		return code;
 	}
 	
+	/**
+	 * Returns IPs already saved
+	 * @return
+	 */
 	public List<String> getIPs() {
 		return ip;
 	}
 
+	/**
+	 * Loads the map
+	 * @throws Exception
+	 */
 	public static void load() throws Exception {
 		ObjectInputStream in = new ObjectInputStream(new FileInputStream(getFile()));
 		map = (HashMap<String, CountryStats>) in.readObject();
 		in.close();
 	}
 	
+	/**
+	 * Saves the map
+	 * @throws Exception
+	 */
 	public static void save() throws Exception {
 		ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(getFile()));
 		out.writeObject(map);
 		out.close();
 	}
 
+	/**
+	 * Returns the file to save to
+	 * @return
+	 */
 	public static File getFile() {
 		return new File("country.dat");
 	}
 	
+	/**
+	 * Adds the bot and it's country to stats
+	 * @param bot
+	 */
 	public static void add(Bot bot) {
 		Country country = null;
 		

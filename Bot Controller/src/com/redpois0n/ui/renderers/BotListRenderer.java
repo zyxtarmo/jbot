@@ -13,6 +13,9 @@ import com.redpois0n.ui.Flags;
 @SuppressWarnings({ "rawtypes", "serial" })
 public class BotListRenderer extends DefaultListCellRenderer {
 
+	/**
+	 * Sets foreground as red if not up to date and the correct flag
+	 */
 	public Component getListCellRendererComponent(JList list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
 		super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
 		

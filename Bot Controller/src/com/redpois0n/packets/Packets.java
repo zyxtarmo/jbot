@@ -7,10 +7,20 @@ public class Packets {
 	
 	private static final Map<Byte, Class<? extends Packet>> packets = new HashMap<Byte, Class<? extends Packet>>();
 
+	/**
+	 * Incoming packets, no added
+	 */
 	static {
 		
 	}
 
+	
+	/**
+	 * Gets packet from incoming header
+	 * @param identifier
+	 * @return Packet
+	 * @throws Exception
+	 */
 	public static Packet getPacket(byte identifier) throws Exception {
 		Class<? extends Packet> packet = packets.get(identifier);
 		

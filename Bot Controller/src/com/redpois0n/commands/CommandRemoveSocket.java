@@ -9,6 +9,9 @@ import com.redpois0n.exceptions.IllegalArgumentLengthException;
 
 public class CommandRemoveSocket extends Command {
 
+	/**
+	 * Closes and removes server socket
+	 */
 	@Override
 	public void execute(String[] args, Bot[] bots) throws Exception {
 		if (args.length != 1) {

@@ -4,6 +4,9 @@ import com.redpois0n.common.packets.Headers;
 
 public class ThreadPing implements Runnable {
 
+	/**
+	 * Pings all bots and repeats after 2,5 seconds
+	 */
 	public void run() {
 		while (true) {
 

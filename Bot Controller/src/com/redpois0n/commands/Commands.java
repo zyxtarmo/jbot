@@ -12,6 +12,9 @@ public class Commands {
 
 	public static final Map<String, Class<? extends Command>> commands = new HashMap<String, Class<? extends Command>>();
 
+	/**
+	 * Commands and their classes
+	 */
 	static {
 		commands.put("disconnect", CommandDisconnect.class);
 		commands.put("addsocket", CommandAddSocket.class);
@@ -28,6 +31,12 @@ public class Commands {
 		commands.put("ping", CommandPing.class);
 	}
 
+	/**
+	 * Gets command from identifier
+	 * @param identifier
+	 * @return
+	 * @throws Exception
+	 */
 	public static Command getCommand(String identifier) throws Exception {
 		Class<? extends Command> clazz = commands.get(identifier);
 
@@ -38,6 +47,12 @@ public class Commands {
 		throw new CommandNotFoundException(identifier);
 	}
 
+	
+	/**
+	 * Executes command from console input
+	 * @param input
+	 * @throws Exception
+	 */
 	public static void execute(String input) throws Exception {
 		String identifier = null;
 

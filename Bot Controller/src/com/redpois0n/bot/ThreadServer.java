@@ -10,6 +10,9 @@ public class ThreadServer implements Runnable {
 		this.socket = socket;
 	}
 
+	/**
+	 * Listens on port
+	 */
 	public void run() {
 		try {
 			while (true) {

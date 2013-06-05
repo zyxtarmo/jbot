@@ -13,7 +13,14 @@ import net.firefang.ip2c.IP2Country;
 
 public class Flags {
 
+	/**
+	 * Cache of flags
+	 */
 	public static HashMap<String, ImageIcon> flags = new HashMap<String, ImageIcon>();
+	
+	/**
+	 * ip2c class
+	 */
 	public static IP2Country ip2c;
 	
 	static {
@@ -24,14 +31,31 @@ public class Flags {
 		}
 	}
 	
+	/**
+	 * Gets country from the bots IP address
+	 * @param bot
+	 * @return Country class
+	 * @throws Exception
+	 */
 	public static Country getCountry(Bot bot) throws Exception {
 		return getCountry(bot.getIP());
 	}
 	
+	/**
+	 * Gets country from this IP address
+	 * @param ip
+	 * @return Country class
+	 * @throws Exception
+	 */
 	public static Country getCountry(String ip) throws Exception {
 		return ip2c.getCountry(ip);
 	}
 	
+	/**
+	 * Gets flag from country class
+	 * @param country
+	 * @return
+	 */
 	public static ImageIcon getFlag(Country country) {
 		String name = null;
 		
@@ -44,6 +68,11 @@ public class Flags {
 		return getFlag(name);
 	}
 	
+	/**
+	 * Gets flag from string (If not exists, errorflag will be used)
+	 * @param name
+	 * @return
+	 */
 	public static ImageIcon getFlag(String name) {
 		if (flags.containsKey(name)) {
 			return flags.get(name);

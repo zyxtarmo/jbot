@@ -5,6 +5,9 @@ import com.redpois0n.bot.Main;
 
 public class CommandHelp extends Command {
 
+	/**
+	 * Prints out every command and their usage, example and description
+	 */
 	@Override
 	public void execute(String[] args, Bot[] bots) throws Exception {
 		for (String str : Commands.commands.keySet()) {
