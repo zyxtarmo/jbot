@@ -8,7 +8,7 @@ public class Base64 {
 	/**
 	 * Encodes a string to base64
 	 * @param s
-	 * @return the encoded string
+	 * @return the base64 encoded string
 	 * @throws Exception
 	 */
 	public static String encode(String s) throws Exception {
@@ -18,7 +18,7 @@ public class Base64 {
 	/**
 	 * Decodes a string from base64
 	 * @param s
-	 * @return the decoded string
+	 * @return the decoded string from base64
 	 * @throws Exception
 	 */
 	public static String decode(String s) throws Exception {
