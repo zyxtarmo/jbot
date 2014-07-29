@@ -12,7 +12,7 @@ public class CommandPing extends Command {
 	@Override
 	public void execute(String[] args, Bot[] bots) throws Exception {
 		for (Bot bot : bots) {
-			bot.writeHandledByte(Headers.PACKET_PING);
+			bot.writeHandledByte(Headers.PACKET_LOG_PING);
 		}
 	}
 

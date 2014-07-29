@@ -8,10 +8,10 @@ public class Packets {
 	private static final Map<Byte, Class<? extends Packet>> packets = new HashMap<Byte, Class<? extends Packet>>();
 
 	/**
-	 * Incoming packets, no added
+	 * Incoming packets
 	 */
 	static {
-		
+		packets.put((byte) 6, Packet6LogPing.class);
 	}
 
 	

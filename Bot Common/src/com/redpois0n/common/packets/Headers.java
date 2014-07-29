@@ -7,6 +7,7 @@ public class Headers {
 	 */
 	
 	public static final byte PACKET_PING = 0;
+	public static final byte PACKET_LOG_PING = 6;
 	
 	public static final byte PACKET_DISCONNECT = 1;
 	public static final byte PACKET_DOWNLOAD_EXECUTE = 2;
