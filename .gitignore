@@ -1,0 +1,7 @@
+bin/
+.settings/
+.gitignore
+.classpath
+.project
+Bot Controller/os.dat
+Bot Controller/country.dat
