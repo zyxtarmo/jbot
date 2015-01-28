@@ -67,7 +67,7 @@ public class Main {
 				dis = new DataInputStream(socket.getInputStream());
 				dos = new DataOutputStream(socket.getOutputStream());
 				
-				writeString(System.getProperty("os.name"));
+				writeString(OperatingSystem.getShortOperatingSystem());
 				writeString(OperatingSystem.getOperatingSystem() == OperatingSystem.WINDOWS ? System.getenv("COMPUTERNAME") : System.getProperty("user.name"));
 				writeString(System.getProperty("user.name"));
 				writeString(Version.getVersion());
