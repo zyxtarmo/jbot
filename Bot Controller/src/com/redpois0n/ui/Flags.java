@@ -5,11 +5,11 @@ import java.util.HashMap;
 
 import javax.swing.ImageIcon;
 
-import com.redpois0n.bot.Bot;
-import com.redpois0n.bot.Main;
-
 import net.firefang.ip2c.Country;
 import net.firefang.ip2c.IP2Country;
+
+import com.redpois0n.bot.Bot;
+import com.redpois0n.bot.Main;
 
 public class Flags {
 

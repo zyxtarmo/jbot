@@ -2,11 +2,11 @@ package commands;
 
 import java.io.File;
 
-import com.redpois0n.common.util.OperatingSystem;
-
 import bot.Main;
 import bot.Util;
 import bot.WinRegistry;
+
+import com.redpois0n.oslib.OperatingSystem;
 
 public class CommandUninstall extends Command {
 

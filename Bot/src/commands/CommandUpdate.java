@@ -6,11 +6,11 @@ import java.io.InputStream;
 import java.net.URL;
 import java.util.Random;
 
-import com.redpois0n.common.util.OperatingSystem;
-
 import bot.Main;
 import bot.Util;
 import bot.WinRegistry;
+
+import com.redpois0n.oslib.OperatingSystem;
 
 public class CommandUpdate extends Command{
 

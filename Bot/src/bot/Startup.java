@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.PrintWriter;
 
-import com.redpois0n.common.util.OperatingSystem;
+import com.redpois0n.oslib.OperatingSystem;
 
 
 public class Startup {

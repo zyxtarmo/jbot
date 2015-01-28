@@ -13,7 +13,7 @@ import javax.swing.UIManager;
 
 import com.redpois0n.commands.Commands;
 import com.redpois0n.common.Version;
-import com.redpois0n.common.util.OperatingSystem;
+import com.redpois0n.oslib.OperatingSystem;
 import com.redpois0n.ui.Frame;
 import com.redpois0n.ui.stats.CountryStats;
 import com.redpois0n.ui.stats.OsStats;

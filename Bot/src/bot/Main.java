@@ -9,9 +9,7 @@ import java.util.HashMap;
 
 import com.redpois0n.common.Base64;
 import com.redpois0n.common.Version;
-import com.redpois0n.common.util.OperatingSystem;
-
-
+import com.redpois0n.oslib.OperatingSystem;
 import commands.Commands;
 
 

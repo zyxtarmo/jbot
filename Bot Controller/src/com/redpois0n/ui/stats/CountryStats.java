@@ -10,11 +10,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import net.firefang.ip2c.Country;
+
 import com.redpois0n.bot.Bot;
 import com.redpois0n.bot.Main;
 import com.redpois0n.ui.Flags;
-
-import net.firefang.ip2c.Country;
 
 @SuppressWarnings("unchecked")
 public class CountryStats implements Serializable {

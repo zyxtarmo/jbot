@@ -1,8 +1,8 @@
 package commands;
 
-import com.redpois0n.common.packets.Headers;
-
 import bot.Main;
+
+import com.redpois0n.common.packets.Headers;
 
 public class CommandPing extends Command {
 

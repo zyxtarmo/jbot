@@ -15,7 +15,7 @@ import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 
 import com.redpois0n.bot.Util;
-import com.redpois0n.common.util.OperatingSystem;
+import com.redpois0n.oslib.OperatingSystem;
 import com.redpois0n.ui.stats.OsStats;
 
 

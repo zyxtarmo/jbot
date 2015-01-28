@@ -8,6 +8,8 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,10 +42,6 @@ import com.redpois0n.common.packets.Headers;
 import com.redpois0n.ui.renderers.BotListRenderer;
 import com.redpois0n.ui.stats.CountryStats;
 import com.redpois0n.ui.stats.OsStats;
-
-
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
 
 @SuppressWarnings({ "serial", "rawtypes", "unchecked" })
 public class Frame extends JFrame {

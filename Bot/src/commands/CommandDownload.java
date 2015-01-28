@@ -5,10 +5,10 @@ import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.net.URL;
 
-import com.redpois0n.common.util.OperatingSystem;
-import com.redpois0n.common.util.Util;
-
 import bot.Main;
+
+import com.redpois0n.common.util.Util;
+import com.redpois0n.oslib.OperatingSystem;
 
 
 
